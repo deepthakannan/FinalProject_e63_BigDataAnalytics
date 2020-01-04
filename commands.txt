@@ -1,0 +1,26 @@
+New Note 3
+
+http://download.scala-ide.org/releases-29/stable/site
+http://www.apache.org/dist/ant/ivyde/updatesite
+
+Desktop/kafka/bin/zookeeper-server-start.sh Desktop/kafka/config/zookeeper.properties
+
+Desktop/kafka/bin/kafka-server-start.sh Desktop/kafka/config/server1.properties
+Desktop/kafka/bin/kafka-server-start.sh Desktop/kafka/config/server2.properties
+Desktop/kafka/bin/kafka-server-start.sh Desktop/kafka/config/server3.properties
+
+Desktop/kafka/bin/kafka-create-topic.sh --topic mytopic --replica 3 --zookeeper localhost:2181
+
+Desktop/kafka/bin/kafka-console-producer.sh --broker-list localhost:9092,localhost:9093,localhost:9094 --sync --topic mytopic
+
+Desktop/kafka/bin/kafka-console-consumer.sh --zookeeper localhost:2181 --topic mytopic --from-beginning
+
+java -jar Desktop/KafkaLibs/MyKafkaProducer.jar
+
+service cassandra start
+
+java -jar Desktop/KafkaLibs/QueryTradeCount.jar 
+
+java -jar Desktop/KafkaLibs/TradeCountTopology.jar 
+
+select * from bigdatakeyspace.tradefrequencies where trade_action in ('BUY', 'SELL', 'COVER', 'SHORT') ALLOW FILTERING;

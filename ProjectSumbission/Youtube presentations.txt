@@ -1,0 +1,14 @@
+2 min introductory vodeo
+
+https://www.youtube.com/watch?v=QE0lDq_Hrz8
+
+
+Two 15 minute videos
+
+Part 1 -> Introduction to Kafka and Storm technologies
+
+https://www.youtube.com/watch?v=xWDWwWRMgvo
+
+Part 2 -> Demo of the final prject. Shows how these technologies comes together to solve a problem
+
+https://www.youtube.com/watch?v=TrsIHE-cVjc
